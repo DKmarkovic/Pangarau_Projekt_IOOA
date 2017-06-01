@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dms.pangarau.MainActivity"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Easy"
+            android:id="@+id/ButtonEasy"
+            android:textSize="70dp"
+            android:backgroundTint="#5ae82b"
+
+            android:onClick="ButtonEasyMode"
+            android:elevation="100dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:id="@+id/ButtonMedium"
+            android:textSize="70dp"
+            android:backgroundTint="#f0ed13"
+            android:onClick="ButtonMediumMode"
+            android:elevation="100dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hard"
+            android:id="@+id/ButtonHard"
+            android:textSize="70dp"
+            android:backgroundTint="#f60808"
+            android:onClick="ButtonHardMode"
+            android:elevation="100dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        android:elevation="-1dp"
+        android:src="@drawable/bg"
+        android:alpha="0.2"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Top score!    "
+        android:id="@+id/StarttopScore"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:backgroundTint="#f58923"
+        android:onClick="StartTopScore"
+        android:visibility="invisible"
+        android:nestedScrollingEnabled="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Addition!    "
+        android:id="@+id/StartsumButton"
+        android:layout_marginTop="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:backgroundTint="#f52323"
+        android:onClick="StartSum"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtraction!"
+        android:id="@+id/StartSubButton"
+        android:layout_marginTop="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:backgroundTint="#1fc709"
+        android:onClick="StartSub"
+        android:visibility="invisible"
+        android:nestedScrollingEnabled="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Multiplay!    "
+        android:id="@+id/StartMultiButton"
+        android:layout_marginTop="265dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:backgroundTint="#107db0"
+        android:onClick="StartMulti"
+        android:visibility="invisible"
+        android:nestedScrollingEnabled="false"
+        android:singleLine="false" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Division!     "
+        android:id="@+id/StartDivButton"
+        android:layout_marginTop="352dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:backgroundTint="#f3df26"
+        android:onClick="StartDiv"
+        android:visibility="invisible"
+        android:nestedScrollingEnabled="false" />
+    //zbrajanje
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/ButtonBackMode"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="440dp"
+        android:onClick="BackMode"
+        android:visibility="invisible"
+        android:backgroundTint="#1db3f3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativLayoutTopScore"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Top Score Addition:"
+            android:id="@+id/topSum"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Top Score Subtraction:"
+            android:id="@+id/topSub"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Top Score Multiplay:"
+            android:id="@+id/topMulti"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="180dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Top Score Division:"
+            android:id="@+id/topDiv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="260dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/TopScoreSum"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="55dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/TopScoreSub"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="135dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/TopScoreMulti"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="215dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/TopScoreDiv"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="295dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/BackTopScore"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="380dp"
+            android:textSize="30dp"
+            android:onClick="Back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/relativLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30s"
+            android:id="@+id/timerScreen"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="30sp"
+            android:backgroundTint="#70f858"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:id="@+id/scoreScreen"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30sp"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 + 10"
+            android:id="@+id/sumScreen"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:backgroundTint="#f76565"
+            android:textColor="#0a0303" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sumScreen"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/gridLayout"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="0"
+                android:id="@+id/button0"
+                android:textSize="70sp"
+                android:backgroundTint="#1b91f2"
+                android:onClick="odgovor" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="1"
+                android:id="@+id/button1"
+                android:textSize="70sp"
+                android:backgroundTint="#f21b2d"
+                android:onClick="odgovor" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="2"
+                android:id="@+id/button2"
+                android:textSize="70sp"
+                android:backgroundTint="#0fd32d"
+                android:onClick="odgovor" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="3"
+                android:id="@+id/button3"
+                android:textSize="70sp"
+                android:backgroundTint="#eedc0c"
+                android:onClick="odgovor" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result"
+            android:layout_below="@+id/gridLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:textSize="40sp"
+            android:padding="5dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play again"
+            android:id="@+id/playAgainButton"
+            android:layout_below="@+id/result"
+            android:layout_centerHorizontal="true"
+            android:onClick="playAgain"
+            android:visibility="invisible"
+            android:layout_marginTop="-255dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/BackSum"
+            android:onClick="Back"
+            android:layout_marginTop="200dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+//oduzimanje
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/relativLayoutSub">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30s"
+            android:id="@+id/timerScreenSub"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="30sp"
+            android:backgroundTint="#70f858"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:id="@+id/scoreScreenSub"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30sp"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 - 10"
+            android:id="@+id/subScreen"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:backgroundTint="#f76565"
+            android:textColor="#0a0303" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subScreen"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/gridLayoutSub"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="0"
+                android:id="@+id/button0Sub"
+                android:textSize="70sp"
+                android:backgroundTint="#1b91f2"
+                android:onClick="odgovorSub" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="1"
+                android:id="@+id/button1Sub"
+                android:textSize="70sp"
+                android:backgroundTint="#f21b2d"
+                android:onClick="odgovorSub" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="2"
+                android:id="@+id/button2Sub"
+                android:textSize="70sp"
+                android:backgroundTint="#0fd32d"
+                android:onClick="odgovorSub" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="3"
+                android:id="@+id/button3Sub"
+                android:textSize="70sp"
+                android:backgroundTint="#eedc0c"
+                android:onClick="odgovorSub" />
+        </GridLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultSub"
+            android:layout_below="@+id/gridLayoutSub"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:textSize="40sp"
+            android:padding="5dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play again"
+            android:id="@+id/playAgainButtonSub"
+            android:onClick="playAgain"
+            android:visibility="invisible"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/BackSub"
+            android:onClick="Back"
+            android:layout_marginTop="260dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    //mnozenje
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/relativLayoutMulti">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30s"
+            android:id="@+id/timerScreenMulti"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="30sp"
+            android:backgroundTint="#70f858"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:id="@+id/scoreScreenMulti"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30sp"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 - 10"
+            android:id="@+id/MultiScreen"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:backgroundTint="#f76565"
+            android:textColor="#0a0303" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MultiScreen"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/gridLayoutMulti"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="0"
+                android:id="@+id/button0Multi"
+                android:textSize="70sp"
+                android:backgroundTint="#1b91f2"
+                android:onClick="odgovorMulti" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="1"
+                android:id="@+id/button1Multi"
+                android:textSize="70sp"
+                android:backgroundTint="#f21b2d"
+                android:onClick="odgovorMulti" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="2"
+                android:id="@+id/button2Multi"
+                android:textSize="70sp"
+                android:backgroundTint="#0fd32d"
+                android:onClick="odgovorMulti" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="3"
+                android:id="@+id/button3Multi"
+                android:textSize="70sp"
+                android:backgroundTint="#eedc0c"
+                android:onClick="odgovorMulti" />
+        </GridLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultMulti"
+            android:layout_below="@+id/gridLayoutMulti"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:textSize="40sp"
+            android:padding="5dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play again"
+            android:id="@+id/playAgainButtonMulti"
+            android:onClick="playAgain"
+            android:visibility="invisible"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/BackMulti"
+            android:onClick="Back"
+            android:layout_marginTop="260dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
+       //dijeljenje
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:id="@+id/relativLayoutDiv"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30s"
+                android:id="@+id/timerScreenDiv"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="30sp"
+                android:backgroundTint="#70f858"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/0"
+                android:id="@+id/scoreScreenDiv"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="30sp"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 - 10"
+                android:id="@+id/DivScreen"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:backgroundTint="#f76565"
+                android:textColor="#0a0303" />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DivScreen"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/gridLayoutDiv"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:tag="0"
+                    android:id="@+id/button0Div"
+                    android:textSize="70sp"
+                    android:backgroundTint="#1b91f2"
+                    android:onClick="odgovorDiv" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:tag="1"
+                    android:id="@+id/button1Div"
+                    android:textSize="70sp"
+                    android:backgroundTint="#f21b2d"
+                    android:onClick="odgovorDiv" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:tag="2"
+                    android:id="@+id/button2Div"
+                    android:textSize="70sp"
+                    android:backgroundTint="#0fd32d"
+                    android:onClick="odgovorDiv" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:tag="3"
+                    android:id="@+id/button3Div"
+                    android:textSize="70sp"
+                    android:backgroundTint="#eedc0c"
+                    android:onClick="odgovorDiv" />
+            </GridLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultDiv"
+                android:layout_below="@+id/gridLayoutDiv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:textSize="40sp"
+                android:padding="5dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play again"
+                android:id="@+id/playAgainButtonDiv"
+                android:onClick="playAgain"
+                android:visibility="invisible"
+                android:layout_marginTop="200dp"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:id="@+id/BackDiv"
+                android:onClick="Back"
+                android:layout_marginTop="250dp"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+
+</RelativeLayout>
